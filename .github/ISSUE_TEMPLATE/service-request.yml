@@ -1,0 +1,32 @@
+name: 服务请求 / Service Request
+description: 请求定制脚本或代码服务 | Request custom scripting or coding service
+title: "[SERVICE] "
+labels: ["service", "paid"]
+body:
+  - type: dropdown
+    id: service-type
+    attributes:
+      label: 服务类型 | Service Type
+      options:
+        - Python脚本定制 ($1-5)
+        - 代码审查 / Code Review ($1-5)
+        - Bug修复 / Bug Fix ($1-5)
+        - PPT模板定制 ($5-10)
+        - 其他 / Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 需求描述 | Description
+      description: 描述你需要什么 | Describe what you need
+    validations:
+      required: true
+  - type: input
+    id: budget
+    attributes:
+      label: 预算 | Budget (USDT)
+      description: 你愿意支付多少 USDT (TRC20)
+      placeholder: "1-10"
+    validations:
+      required: true
